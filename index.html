@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;;
+                font-family: "Josefin Sans", sans-serif;
+	
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: hsl(206, 92%, 94%);
+            }
+            .container{
+	            display: block;
+                width: 50%;
+                margin: auto;
+                margin-top: 100px;
+                background-color: white;
+                padding: 2rem 8rem;
+                border-radius: 1rem;
+                box-shadow: 0 1rem -0.7rem rgba(0, 1, 0.2, .4);
+            }
+
+            .quotes{
+                display: block;
+                position: relative;
+                padding: 50px;
+                background-color: mediumpurple;
+            }
+            #quote{
+                /* height: 400em; */
+                display: flex;
+                font-size: 1.5rem;
+                font-style: italic;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: 500;
+            }
+            #author{
+                right: 10px;
+                bottom: 10px;
+                position: absolute;
+                font-family: "Times New Roman";
+                font-size: 1.2rem;
+                font-weight: 600;
+                
+            }
+            #newQuote{
+                cursor: pointer;
+                display: block;
+                width: 50%;
+                margin: auto;
+                margin-top: 15px;
+                border-radius: 15px;
+                padding: 10px;
+                font-family: 'Times New Roman', Times, serif;
+                background-color: darkseagreen;
+                color: lavender;
+                font-size: 1.2rem;
+            }
+            header{
+                position: relative;
+                top: 20px;
+                font-size: 3rem;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: 600;
+                color: saddlebrown;
+                text-align: center;
+                font-style: italic;
+                }
+        </style>
+    </head>
+    <header>
+        Motivational Quotes
+    </header>
+    <title>
+        Random Quotes
+    </title>
+    <body>
+        <div class="container">
+            <div class="quotes">
+                <div id="quote">{%quote%}</div>
+                <div id="author">~by {%author%}</div>
+             </div>
+             <div id="btn">
+                 <button id="newQuote">New Quotes</button>
+             </div>
+        </div>
+    </body>
+    <script>
+        let btn = document.getElementById("newQuote")
+        btn.addEventListener('click',() => {
+            location.reload();
+        })
+    </script>
+</html>
